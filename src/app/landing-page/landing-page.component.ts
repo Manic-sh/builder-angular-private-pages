@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
     let apiUrl = 'https://cdn.builder.io/api/v2/content'
     let modelName = 'page'
     this.builderRSP = this.http.get<any>(`${apiUrl}/${modelName}?apiKey=a54c9ecf97f8469b9d9611d82580d299&limit=1&userAttributes.urlPath=/`,{
-      headers: { Authorization: `Bearer bpk-619dc4b575a34b36b6839f3489308751` },
+      headers: { Authorization: `Bearer bpk-private-key` },
     }).pipe(map(data => data.results[0]))
   }
 
